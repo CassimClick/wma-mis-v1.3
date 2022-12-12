@@ -52,7 +52,7 @@ class BillController extends BaseController
 
 public function test()
 {
-     
+   return $this->response->setJSON([40]);  
 }
 
 
