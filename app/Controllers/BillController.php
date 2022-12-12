@@ -91,7 +91,7 @@ class BillController extends BaseController
                 'BillPayOpt' =>  $this->getVariable('BillPayOpt'),
                 'BillItems' => [
                     'BillItem' => multiDimensionArray([
-                        'GfsCode' => $this->getVariable('GfsCode'),
+                        'GfsCode' => '140202',
                         'BillItemAmt' => $this->getVariable('BillItemAmt'),
                         'BillItemEqvAmt' => $this->getVariable('BillItemAmt'),
                         'BillItemRef' => $this->getVariable('BillItemRef'),
