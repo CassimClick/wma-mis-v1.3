@@ -1,0 +1,224 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+// variables
+
+$dark: #282829;
+$lightBlue: #e7e7e7;
+$activeOrange: #db611e;
+$white: #ffffff;
+$lightPurple: #989dc5;
+
+// mixins
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+    -webkit-box-shadow:$top $left $blur $color #{$inset};
+    -moz-box-shadow:$top $left $blur $color #{$inset};
+    box-shadow:$top $left $blur $color #{$inset};
+}
+
+body {
+  background: $lightBlue;
+  font-family: 'Poppins', sans-serif
+  
+}
+
+// navigation styling
+nav {
+  height: 50px;
+  background: $white;
+  @include box-shadow(0, .5rem, 1.5rem, rgba(0,0,0,.15));
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  z-index: -2;
+  position: relative;
+  ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    li {
+      margin-right: 30px;
+      color: $activeOrange;
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+  }
+  .logo {
+    height: 50px;
+    width: 175px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    margin-right: 30px;
+    background-color: #db611e;
+    color: #fff;
+    cursor: pointer;
+  }
+  .arrow-down {
+    width: 0; 
+    height: 0; 
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #fff;
+  }
+}
+
+
+// banner styles
+.banner {
+  background: url('http://localhost/vipimo/assets/images/slide1.JPG') center center/cover;
+  height: auto;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  .overlay{
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.789);
+    position: absolute;
+  }
+  @media (min-width: 768px) {
+    height: 450px;
+    margin-bottom: 32px;
+  }
+  .banner-image {
+    position: absolute;
+  
+      @media (min-width: 768px) {
+        display: inherit; 
+        height: 400px;
+        top: 0px;
+        opacity: 0.5;
+      }
+    @media (min-width: 992px) {
+        height: 500px;
+        top: -50px;
+      opacity: 1;
+      }
+    }
+
+  .banner-text {
+    max-width: 550px;
+    position: absolute;
+    
+    z-index: 100;
+    float: left;
+    h2 {
+      font-size: 2rem;
+      font-weight: 400;
+      letter-spacing: 3px;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+   
+  }
+
+}
+
+// card styles
+.mb-30 {
+  margin-bottom: 30px;
+}
+.card {
+  padding: 16px 24px;
+  background: $white;
+  height: 100%;
+  position: relative;
+  border: none;
+  box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.15);
+  border: 2px solid transparent;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: 10;
+  h3.card-title {
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: $dark;
+  }
+  p {
+    color: $lightPurple;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 72px;
+  }
+  .card-link {
+    position: absolute;
+    bottom: 18px;
+  }
+  &:hover {
+    -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-15px);
+  -o-transform: translateY(-15px);
+  transform: translateY(-15px);
+    box-shadow: 0 1rem 1.5rem rgba(0,0,0,.15);
+    cursor: pointer;
+  }
+  .card-icon {
+    width: 50px;
+    margin-bottom: 8px;
+    position: relative;
+    top: 0;
+    // left: -8px;
+  }
+}
+  .button {
+  border: 0;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 3px;
+  padding: .6rem 2.75rem;
+  background: $activeOrange;
+  color: $white;
+  box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.25);
+  cursor: pointer;
+  position: relative;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  
+  &:hover {
+
+    color: #fff;
+    background: $dark;
+  }
+}
+
+ul{
+  li{
+    margin-bottom: 6.5px;
+  }
+}
+table{
+  border-color: #282829;
+  td,tr,th{
+    border-color: #282829;
+  }
+}
+
+// footer styles
+footer {
+  background: $dark;
+  color: #fff;
+  margin-top: 32px;
+  padding: 10px 0;
+ 
+}
+
+

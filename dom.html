@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 class="url"></h2>
+
+    <table>
+        <tr>
+            <td>1</td>
+
+            <td>
+                <input id="width" name="width[]" oninput="checkForAreaError(this)" class="form-control measuredQty"
+                    type="number" required="">
+            </td>
+
+            <td>
+                <input id="height" step="any" name="height[]" oninput="checkForAreaError(this)" data-weight="net"
+                    class="form-control netQuantity" type="number" required="">
+            </td>
+
+
+            <td>
+                <input step="any" name="area[]" readonly="" data-weight="net" class="form-control netQuantity"
+                    type="number" required="">
+            </td>
+
+            <td>
+                <input data-comment="comment" readonly="" name="comment[]" required="" class="form-control"
+                    style=" border:0;outline: none;">
+            </td>
+
+            <td>
+                <input name="status[]" hidden="" class="form-control">
+
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+
+            <td>
+                <input id="width" name="width[]" oninput="checkForAreaError(this)" class="form-control measuredQty"
+                    type="number" required="">
+            </td>
+
+            <td>
+                <input id="height" step="any" name="height[]" oninput="checkForAreaError(this)" data-weight="net"
+                    class="form-control netQuantity" type="number" required="">
+            </td>
+
+
+            <td>
+                <input step="any" name="area[]" readonly="" data-weight="net" class="form-control netQuantity"
+                    type="number" required="">
+            </td>
+
+            <td>
+                <input data-comment="comment" readonly="" name="comment[]" required="" class="form-control"
+                    style=" border:0;outline: none;">
+            </td>
+
+            <td>
+                <input name="status[]" hidden="" class="form-control">
+
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+
+            <td>
+                <input id="width" name="width[]" oninput="checkForAreaError(this)" class="form-control measuredQty"
+                    type="number" required="">
+            </td>
+
+            <td>
+                <input id="height" step="any" name="height[]" oninput="checkForAreaError(this)" data-weight="net"
+                    class="form-control netQuantity" type="number" required="">
+            </td>
+
+
+            <td>
+                <input step="any" name="area[]" readonly="" data-weight="net" class="form-control netQuantity"
+                    type="number" required="">
+            </td>
+
+            <td>
+                <input data-comment="comment" readonly="" name="comment[]" required="" class="form-control">
+            </td>
+
+            <td>
+                <input name="status[]" class="form-control" required="">
+
+            </td>
+        </tr>
+    </table>
+
+
+    <script>
+
+
+function base_url() {
+    var pathparts = location.pathname.split('/');
+    if (location.host == 'localhost') {
+        var url = location.origin+'/'+pathparts[1].trim('/')+'/'; // http://localhost/myproject/
+    }else{
+        var url = location.origin; // http://stackoverflow.com
+    }
+    return url;
+
+}
+document.querySelector('.url').textContent = base_url()
+        // function checkForAreaError(val) {
+        //     // console.log(val)
+        //     // console.log(parent)
+        //     const parent = val.parentNode.parentNode
+        //     const width = parent.children[1].children[0].value
+        //     const height = parent.children[2].children[0].value
+        //     const area = parent.children[3].children[0]
+        //     const comment = parent.children[4].children[0]
+        //     const status = parent.children[5].children[0]
+        //     area.value = Number(width * height)
+        //     comment.value = 'comment'
+        //     status.value = 2
+        //     // if (height && width) {
+        //     //     console.log(area.value);
+        //     // }
+        //      width && height ? console.log(area.value) : null
+
+        //     //    console.log('width ' + width)
+        //     //    console.log('height ' + height)
+        //     // const height = document.querySelector('#height').value
+
+        //     // let netWeightInput = gross.parentNode.nextElementSibling.childNodes[0];
+        //     // let netWeight = netWeightInput;
+
+        //     // let comment = gross.parentNode.nextElementSibling.nextElementSibling.childNodes[0].nextElementSibling;
+        //     // const area = height && width ? height * width : 0
+
+        //     // console.log('width ' + width)
+        //     // console.log('height ' + height)
+
+        //     // console.log('Area ' + area)
+
+        // }
+    </script>
+
+</body>
+
+</html>

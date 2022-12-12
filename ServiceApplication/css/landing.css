@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+body {
+  background: #e7e7e7;
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  height: 50px;
+  background: #ffffff;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  z-index: -2;
+  position: relative;
+}
+nav ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+nav ul li {
+  margin-right: 30px;
+  color: #db611e;
+}
+nav ul li:last-child {
+  margin-right: 0px;
+}
+nav .logo {
+  height: 50px;
+  width: 175px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  margin-right: 30px;
+  background-color: #db611e;
+  color: #fff;
+  cursor: pointer;
+}
+nav .arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #fff;
+}
+
+.banner {
+  background: url("http://localhost/vipimo/assets/images/slide1.JPG") center center/cover;
+  height: auto;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.banner .overlay {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.789);
+  position: absolute;
+}
+@media (min-width: 768px) {
+  .banner {
+    height: 450px;
+    margin-bottom: 32px;
+  }
+}
+.banner .banner-image {
+  position: absolute;
+}
+@media (min-width: 768px) {
+  .banner .banner-image {
+    display: inherit;
+    height: 400px;
+    top: 0px;
+    opacity: 0.5;
+  }
+}
+@media (min-width: 992px) {
+  .banner .banner-image {
+    height: 500px;
+    top: -50px;
+    opacity: 1;
+  }
+}
+.banner .banner-text {
+  max-width: 550px;
+  position: absolute;
+  z-index: 100;
+  float: left;
+}
+.banner .banner-text h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 3px;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.card {
+  padding: 16px 24px;
+  background: #ffffff;
+  height: 100%;
+  position: relative;
+  border: none;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
+  border: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+  z-index: 10;
+}
+.card h3.card-title {
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: #282829;
+}
+.card p {
+  color: #989dc5;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 72px;
+}
+.card .card-link {
+  position: absolute;
+  bottom: 18px;
+}
+.card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+.card .card-icon {
+  width: 50px;
+  margin-bottom: 8px;
+  position: relative;
+  top: 0;
+}
+
+.button {
+  border: 0;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 3px;
+  padding: 0.6rem 2.75rem;
+  background: #db611e;
+  color: #ffffff;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  position: relative;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+}
+.button:hover {
+  color: #fff;
+  background: #282829;
+}
+
+ul li {
+  margin-bottom: 6.5px;
+}
+
+table {
+  border-color: #282829;
+}
+table td, table tr, table th {
+  border-color: #282829;
+}
+
+footer {
+  background: #282829;
+  color: #fff;
+  margin-top: 32px;
+  padding: 10px 0;
+}/*# sourceMappingURL=landing.css.map */

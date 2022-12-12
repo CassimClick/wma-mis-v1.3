@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <title>Answer</title>
+  </head>
+  <body>
+    <section>
+      <div class="content">
+        <!-- Button trigger modal -->
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-toggle="modal"
+          data-target="#exampleModal"
+        >
+          Launch demo modal
+        </button>
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button class="btn btn-primary print">Print</button>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body-wrapper">
+                <div class="modal-body">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Porro, quo! Et quibusdam cumque temporibus alias at
+                    blanditiis aliquid voluptate reiciendis reprehenderit. Fugit
+                    veniam culpa dolorum expedita adipisci nemo ad eligendi.
+                    Natus accusantium saepe harum. Ab tenetur, id qui suscipit
+                    alias expedita accusantium similique, animi optio enim eum?
+                    Nemo eaque eius deserunt unde ab labore sit possimus ut,
+                    architecto magni dolorem suscipit et expedita! Nam, magnam
+                    sequi debitis dolorem facilis dolores nisi deleniti enim
+                    esse eligendi excepturi maxime! Dignissimos alias
+                    reprehenderit modi tenetur libero deleniti debitis molestiae
+                    consectetur numquam fugit error eligendi voluptatum officiis
+                    cumque expedita voluptate culpa quod, ea delectus enim
+                    dicta! Magnam, esse explicabo impedit labore molestias hic
+                    et itaque ipsa animi neque aliquid tempora. Earum, dicta ea.
+                    Quam enim possimus sunt voluptas natus dolorem veniam atque
+                    perspiciatis quis non quod sequi temporibus eligendi iusto
+                    voluptatum adipisci fuga ut accusamus odio distinctio, in
+                    voluptate excepturi. Magni ea ipsa fugit, tempora, ullam
+                    sit,
+                  </p>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" class="btn btn-primary">
+                  Save changes
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"
+    integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd"
+    crossorigin="anonymous"
+  ></script>
+  <script src="./Main.js" defer></script>
+</html>
+
+<div class="bill-header">
+  <div class="logo">
+    <img src="<?= base_url() ?>/assets/images/emblem.png" alt="" />
+  </div>
+  <div class="heading">
+    <h5 class="text-center"><b>THE UNITED REPUBLIC OF TANZANIA</b></h5>
+    <h5 class="text-center"><b>MINISTRY OF INDUSTRIES AND TRADE </b></h5>
+    <h5 class="text-center">WEIGHTS AND MEASURES AGENCY</h5>
+    <h5 class="text-center">ARUSHA COLLECTION REPORT</h5>
+    <p class="text-center"><?= date("d M Y") ?></p>
+  </div>
+  <div class="logo">
+    <img
+      class="float-right"
+      src="<?= base_url() ?>/assets/images/wma1.png"
+      alt=""
+    />
+  </div>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Qty</th>
+      <th>Product</th>
+      <th>Serial #</th>
+      <th>Description</th>
+      <th>Subtotal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Call of Duty</td>
+      <td>455-981-221</td>
+      <td>El snort testosterone trophy driving gloves handsome</td>
+      <td>$64.50</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Need for Speed IV</td>
+      <td>247-925-726</td>
+      <td>Wes Anderson umami biodiesel</td>
+      <td>$50.00</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Monsters DVD</td>
+      <td>735-845-642</td>
+      <td>Terry Richardson helvetica tousled street art master</td>
+      <td>$10.70</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Grown Ups Blue Ray</td>
+      <td>422-568-642</td>
+      <td>Tousled lomo letterpress</td>
+      <td>$25.99</td>
+    </tr>
+  </tbody>
+</table>

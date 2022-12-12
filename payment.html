@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment</title>
+</head>
+
+<body>
+    <script>
+       
+
+        function calculateAmountFigure(lotArray, group) {
+             function productBillSmallLot(lot) {
+            if (lot > 0 && lot <= 100) {
+                return 30000;
+            } else if (lot >= 101 && lot <= 500) {
+                return 100000;
+            } else if (lot >= 501 && lot <= 3200) {
+                return 100000;
+            }
+        }
+
+        function productBillFirstFiveLargeLot(lot) {
+            if (lot > 3200) {
+                return 300000;
+            }
+        }
+
+        function productBillSecondFiveLargeLot(lot) {
+            if (lot > 3200) {
+                return 200000;
+            }
+        }
+
+        function productBillMoreThanTenLot(lot) {
+            if (lot > 3200) {
+                return 100000;
+            }
+        }
+            switch (group) {
+                case 'small':
+                    return lotArray.map(lot => {
+                        return productBillSmallLot(lot)
+                    }).reduce((x, y) => {
+                        return x + y
+                    }, 0)
+                   
+                    break;
+                case 'firstFive':
+                   return lotArray.map(lot => {
+                        return productBillFirstFiveLargeLot(lot)
+                    }).reduce((x, y) => {
+                        return x + y
+                    }, 0)
+                   
+                    break;
+                case 'secondFive':
+                   return lotArray.map(lot => {
+                        return productBillSecondFiveLargeLot(lot)
+                    }).reduce((x, y) => {
+                        return x + y
+                    }, 0)
+                   
+                    break;
+                case 'moreThanTen':
+                   return lotArray.map(lot => {
+                        return productBillMoreThanTenLot(lot)
+                    }).reduce((x, y) => {
+                        return x + y
+                    }, 0)
+                   
+                    break;
+
+                
+            }
+
+
+
+        }
+
+
+        let total = 0
+        // const lotSizes = [
+        //     // 420, 1200, 2200, 4100, 210, 6232, 4123, 100, 452, 185, 140, 3468, 176,
+        //     // 200, 250, 254, 147, 590, 3400, 3500, 3520, 3562, 4520, 5000, 4750, 4100,
+        //     // 5040, 4563, 4520, 4520, 74520, 45, 4520
+        //     85,20000,4000
+        // ];
+        const lotSizes = [
+            420, 1200, 2200, 4100, 210, 6232, 4123, 100, 452, 185, 140, 3468, 176,
+            200, 250, 254, 147, 590, 3400, 3500, 3520, 3562, 4520, 5000, 4750, 4100,
+            5040, 4563, 4520, 4520, 74520, 45, 4520
+        ];
+        // const lotSizes = [4201,4202,4203,4204,4205,4206,4207,4208,4209,4210,4211,4212]
+
+        const x = lotSizes.filter((lot) => {
+            return lot > 3210;
+            //  index >= 1 && index <= 4
+        });
+        const smallLot = lotSizes.filter((lot) => {
+            return lot <= 3210;
+            //  index >= 1 && index <= 4
+        });
+        const firstFiveLot = lotSizes
+            .filter((lot) => {
+                return lot > 3210;
+                //  index >= 1 && index <= 4
+            })
+            .splice(0, 5);
+
+        const secondFiveLot = lotSizes
+            .filter((lot) => {
+                return lot > 3210;
+                //  index >= 1 && index <= 4
+            })
+            .splice(5, 5);
+
+        const moreThanTenLot = lotSizes
+            .filter((lot) => {
+                return lot > 3210;
+                //  index >= 1 && index <= 4
+            })
+            .splice(10);
+
+       
+
+        // console.log(' Small Lot ' + calculateAmountFigure(smallLot,'small'))
+        
+          console.log(x);
+        //   console.log(smallLot);
+        console.log(smallLot.length ? smallLot : 'No Elements');
+        console.log(' Small  ' + calculateAmountFigure(smallLot,'small'))
+
+        console.log(firstFiveLot.length ? firstFiveLot : 'No Elements');
+        console.log(' First Five ' + calculateAmountFigure(firstFiveLot,'firstFive'))
+
+        console.log(firstFiveLot.length ? firstFiveLot : 'No Elements');
+        console.log(' Second Five ' + calculateAmountFigure(secondFiveLot,'secondFive'))
+
+        console.log(moreThanTenLot.length ? moreThanTenLot : 'No Elements');
+        console.log(' More Than 10 ' + calculateAmountFigure(moreThanTenLot,'moreThanTen'))
+        //   console.log(sixToTenLargeLot.length ? sixToTenLargeLot : 'No Elements');
+        //   console.log(ToTen.length ? ToTen : 'No Elements');
+
+        //   console.log('Total ' + total)
+    </script>
+</body>
+
+</html>
