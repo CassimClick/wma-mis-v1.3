@@ -50,7 +50,10 @@ class BillController extends BaseController
         return $this->request->getVar($var, FILTER_SANITIZE_SPECIAL_CHARS);
     }
 
-
+public function test()
+{
+     
+}
 
 
 
