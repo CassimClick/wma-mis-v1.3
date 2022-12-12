@@ -50,10 +50,11 @@ class BillController extends BaseController
         return $this->request->getVar($var, FILTER_SANITIZE_SPECIAL_CHARS);
     }
 
-public function test()
-{
-   return $this->response->setJSON([40]);  
-}
+    public function test()
+    {
+        $data = [];
+        return $this->response->setJSON([40]);
+    }
 
 
 
@@ -73,7 +74,7 @@ public function test()
 
             ],
 
-               'BillTrxInf'=>[
+            'BillTrxInf' => [
                 'BillId' => randomString(),
                 'SubSpCode' => $this->SubSpCode,
                 'SpSysId' => $this->SpSysId,
@@ -101,11 +102,11 @@ public function test()
                         'GfsCode' => $this->getVariable('GfsCode'),
                     ])
                 ],
-               ]
+            ]
 
-           
+
         ];
-       
+
         echo $this->GepGpProcess->billSubmission($billDetails);
     }
 
